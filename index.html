@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>تحدي الأسئلة</title>
+</head>
+<body>
+    <div class="container">
+        <!-- شاشة البداية -->
+        <div id="welcome-screen">
+            <h1>أدخل كلمة السر</h1>
+            <input type="password" id="password" placeholder="أدخل كلمة السر">
+            <button id="start-btn">بدء الاختبار</button>
+            <p id="message" style="color:red;"></p>
+        </div>
+
+        <!-- شاشة إدخال الاسم -->
+        <div id="name-screen" style="display: none;">
+            <h1>أدخل اسمك باللغة العربية</h1>
+            <input type="text" id="first-name" placeholder="الاسم الأول">
+            <input type="text" id="last-name" placeholder="الاسم الثاني">
+            <button id="next-btn">التالي</button>
+        </div>
+
+        <!-- الشاشة الترحيبية -->
+        <div id="greeting-screen" style="display: none;">
+            <h2 id="greeting-message"></h2>
+            <button id="begin-quiz-btn">بدء الاختبار</button>
+        </div>
+
+        <!-- شاشة قوانين التحدي -->
+        <div id="rules-screen" style="display: none;">
+            <h2>قوانين التحدي</h2>
+            <p>هناك 15 مستويات في هذا التحدي. في كل مستوى، سيتم طرح 11 سؤالًا. لا يمكنك الانتقال إلى المستوى التالي إلا إذا أجبت على عدد كافٍ من الأسئلة بشكل صحيح</p>
+            <p>بريم النقاط</p>
+            <ul>
+                <li>المستوى 1: 6 إجابات صحيحة</li>
+                <li>المستوى 2: 7 إجابات صحيحة</li>
+                <li>المستوى 3: 8 إجابات صحيحة</li>
+                <li>المستوى 4: 9 إجابات صحيحة</li>
+                <li>المستوى 5: 10 إجابات صحيحة</li>
+                <li>المستوى 6: 11 إجابات صحيحة</li>
+                <li>المستوى 7: 11 إجابات صحيحة</li>
+                <li>المستوى 8: 8 إجابات صحيحة</li>
+                <li>المستوى 9: 10 إجابات صحيحة</li>
+                <li>المستوى 10: 12 إجابات صحيحة</li>
+                <li>المستوى 11: 14 إجابات صحيحة</li>
+                <li>المستوى 12: 16 إجابات صحيحة</li>
+            </ul>
+            <button id="start-quiz-btn">ابدأ الاختبار</button>
+        </div>
+
+        <!-- شاشة الأسئلة -->
+        <div id="quiz-screen" style="display: none;">
+            <h2 id="question"></h2>
+            <div id="answers"></div>
+            <button id="next-question-btn" style="display: none;">التالي</button>
+            <p id="points-display">النقاط: 0</p> <!-- إضافة مكان عرض النقاط هنا -->
+        </div>
+
+        <!-- شاشة النتيجة -->
+        <div id="result-screen" style="display: none;">
+            <h2>نتيجة الاختبار</h2>
+            <p id="result-message"></p>
+            <button id="next-level-btn" style="display: none;">الانتقال للمستوى التالي</button>
+        </div>
+
+        <!-- شاشة الشهادة النهائية -->
+        <div id="certificate-screen" style="display: none;">
+            <h2>!تهانينا</h2>
+            <p>!لقد أكملت جميع المستويات بنجاح وبرهنة انك من الفطاحلة</p>
+            <p>:شهادة تقديرية مقدمة من طرف المبرمج إلى <span id="certificate-name"></span></p>
+            <p>تاريخ: <span id="certificate-date"></span></p>
+            <p>وقت: <span id="certificate-time"></span></p>
+            <div class="signature">
+                <p>:توقيع</p>
+                <p>_________ziyad;lh___________</p>
+                <p>.احتفظ بصورة من هذه الشهادة في هاتفك، وعندما تجمعك الأقدار بالمبرمج، شاركها معه بفخر</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
